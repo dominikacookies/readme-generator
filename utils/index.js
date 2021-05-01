@@ -1,3 +1,10 @@
+const inquirer = require("inquirer");
+
+const getProjectInformation = async (questions) => {
+  const answers = await inquirer.prompt(questions)
+  return answers;
+}
+
 const init = async () => {
   const questions = [
     {
@@ -21,7 +28,7 @@ const init = async () => {
       name: "usageInformation",
     },
     {
-      choices: ['MIT', 'APACHE_2.0', 'GPL_3.0', 'BSD_3', 'None'],
+      choices: ["MIT", "APACHE_2.0", "GPL_3.0", "BSD_3", "None"],
       type: "checkbox",
       message: "Please select your project license from the below options.",
       name: "licenseType",
@@ -47,6 +54,7 @@ const init = async () => {
       name: "githubLink",
     },
   ];
-  console.log(questions)
+  const answers = await getProjectInformation(questions);
+  console.log(answers);
 };
 init();
