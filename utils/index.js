@@ -29,7 +29,7 @@ const init = async () => {
     },
     {
       choices: ["MIT", "APACHE_2.0", "GPL_3.0", "BSD_3", "None"],
-      type: "checkbox",
+      type: "list",
       message: "Please select your project license from the below options.",
       name: "licenseType",
     },
