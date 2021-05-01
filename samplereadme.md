@@ -3,9 +3,6 @@
 License badge
 
 ## Table of Contents
-
-- [Title Here](#title-here)
-  - [Table of Contents](#table-of-contents)
   - [Description](#description)
   - [Installation instructions](#installation-instructions)
   - [Usage information](#usage-information)
