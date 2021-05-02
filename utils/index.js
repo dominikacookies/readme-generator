@@ -1,5 +1,5 @@
 const inquirer = require("inquirer");
-const createdReadmeContent = require("./createReadme")
+const createReadmeContent = require("./readMeContentCreator.js")
 
 const getProjectInformation = async (questions) => {
   const answers = await inquirer.prompt(questions)
@@ -42,7 +42,7 @@ const init = async () => {
     {
       type: "input",
       message: "Please enter information about how a user could test your project.",
-      name: "testInstructions",
+      name: "testingInstructions",
     },
     {
       type: "input",
@@ -56,7 +56,7 @@ const init = async () => {
     },
   ];
   const answers = await getProjectInformation(questions);
-  const readmeContents = createdReadmeContent(answers)
+  const readmeContents = createReadmeContent(answers)
   console.log(readmeContents)
 };
 init();
