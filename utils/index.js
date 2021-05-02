@@ -1,5 +1,6 @@
 const inquirer = require("inquirer");
-const createReadmeContent = require("./readMeContentCreator.js")
+const createReadmeContent = require("./readmeContentCreator.js")
+const generateReadme = require("./readmeFileCreator.js")
 
 const getProjectInformation = async (questions) => {
   const answers = await inquirer.prompt(questions)
@@ -57,6 +58,6 @@ const init = async () => {
   ];
   const answers = await getProjectInformation(questions);
   const readmeContents = createReadmeContent(answers)
-  console.log(readmeContents)
+  generateReadme(readmeContents)
 };
 init();
