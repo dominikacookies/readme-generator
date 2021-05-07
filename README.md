@@ -3,12 +3,7 @@
   ## Table of Contents
   - [Description](#description)
   - [Key features](#key-features)
-  - Installation
-  - [Usage information](#usage-information)
-  - [License](#license)
-  - [Contributing](#contributing)
-  - [Tests](#tests)
-  - [Questions](#questions)
+  - [Installation](#installation)
 
 ## Description
 This is a command line application which dynamically generates a README.md file based on a selection of user responses.
