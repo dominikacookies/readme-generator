@@ -11,6 +11,14 @@ const getLicenseBadge = (licenseType) => {
     case "APACHE 2.0":
       badge = `![image](https://img.shields.io/crates/l/rustc-serialize/0.3.24)`
       break;
+    
+    case "GPL 3.0":
+      badge = `![image](https://img.shields.io/eclipse-marketplace/l/notepad4e?label=GPL%203.0)`
+      break;
+  
+    case "BSD 3":
+      badge = `![image](https://img.shields.io/pypi/l/Django)`
+      break;
   }
   return badge;
 }
