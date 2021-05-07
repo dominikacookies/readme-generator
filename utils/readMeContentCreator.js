@@ -51,9 +51,10 @@ const constructLicenseInformation = (licenseType) => {
 }
 
 const createReadmeContent = (answers) => {
-  const {title, description, installationInstructions, usageInformation, licenseType, contributingGuidelines, testingInstructions, email, githubLink} = answers
+  const {title, description, installationInstructions, usageInformation, licenseType, contributingGuidelines, testingInstructions, email, githubUsername} = answers
   const licenseBadge = getLicenseBadge(licenseType)
   const licenseInformation = constructLicenseInformation(licenseType)
+  const githubLink = `https://github.com/${githubUsername}`
 
   return `
   # ${title}
@@ -63,7 +64,7 @@ const createReadmeContent = (answers) => {
   ## Table of Contents
   - [Description](#description)
   - [Installation instructions](#installation-instructions)
-  - [Usage information](#usage-information)
+  - [Usage](#usage-information)
   - [License](#license)
   - [Contributing](#contributing)
   - [Tests](#tests)

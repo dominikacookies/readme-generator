@@ -52,8 +52,8 @@ const init = async () => {
     },
     {
       type: "input",
-      message: "Please provide a link to your Github account.",
-      name: "githubLink",
+      message: "Please provide your Github username.",
+      name: "githubUsername",
     },
   ];
   const answers = await getProjectInformation(questions);
