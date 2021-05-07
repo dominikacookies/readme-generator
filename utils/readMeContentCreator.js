@@ -23,12 +23,37 @@ const getLicenseBadge = (licenseType) => {
   return badge;
 }
 
+const constructLicenseInformation = (licenseType) => {
+  let licenseDetails = {};
+  if (licenseType === "None" ) {
+    return "This project is not licensed."
+  }
+  switch (licenseType) {
+    case "MIT":
+      licenseDetails.name = "MIT"
+      licenseDetails.url = `https://www.tawesoft.co.uk/kb/article/mit-license-faq`
+      break;
+    
+    case "APACHE 2.0":
+      badge = `![image](https://img.shields.io/crates/l/rustc-serialize/0.3.24)`
+      break;
+    
+    case "GPL 3.0":
+      badge = `![image](https://img.shields.io/eclipse-marketplace/l/notepad4e?label=GPL%203.0)`
+      break;
+  
+    case "BSD 3":
+      badge = `![image](https://img.shields.io/pypi/l/Django)`
+      break;
+  }
+  return `This project is licensed under the ${licenseDetails.name} license. 
+  [Click here] ("${licenseDetails.url}") to read about the details of this license.`;
+}
+
 const createReadmeContent = (answers) => {
   const {title, description, installationInstructions, usageInformation, licenseType, contributingGuidelines, testingInstructions, email, githubLink} = answers
   const licenseBadge = getLicenseBadge(licenseType)
-  // const licenseInformation = constructLicenseInformation(licenseType)
-
-  console.log(licenseBadge)
+  const licenseInformation = constructLicenseInformation(licenseType)
 
   return `
   # ${title}
@@ -54,6 +79,7 @@ const createReadmeContent = (answers) => {
   ${usageInformation}
   
   ## License
+  ${licenseInformation}
   
   
   ## Contributing guidelines
