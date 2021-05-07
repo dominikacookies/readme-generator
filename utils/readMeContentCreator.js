@@ -35,15 +35,15 @@ const constructLicenseInformation = (licenseType) => {
       break;
     
     case "APACHE 2.0":
-      badge = `![image](https://img.shields.io/crates/l/rustc-serialize/0.3.24)`
+      badge = `![image](https://www.apache.org/licenses/LICENSE-2.0)`
       break;
     
     case "GPL 3.0":
-      badge = `![image](https://img.shields.io/eclipse-marketplace/l/notepad4e?label=GPL%203.0)`
+      badge = `![image](https://www.gnu.org/licenses/gpl-3.0.en.html)`
       break;
   
     case "BSD 3":
-      badge = `![image](https://img.shields.io/pypi/l/Django)`
+      badge = `![image](https://fossa.com/blog/open-source-software-licenses-101-bsd-3-clause-license/)`
       break;
   }
   return `This project is licensed under the ${licenseDetails.name} license. 
@@ -65,7 +65,7 @@ const createReadmeContent = (answers) => {
   - [Installation instructions](#installation-instructions)
   - [Usage information](#usage-information)
   - [License](#license)
-  - [Contributing guidelines](#contributing-guidelines)
+  - [Contributing](#contributing)
   - [Tests](#tests)
   - [Questions](#questions)
   
@@ -82,7 +82,7 @@ const createReadmeContent = (answers) => {
   ${licenseInformation}
   
   
-  ## Contributing guidelines
+  ## Contributing
   ${contributingGuidelines}
   
   ## Tests
