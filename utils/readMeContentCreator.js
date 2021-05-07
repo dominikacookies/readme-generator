@@ -47,7 +47,7 @@ const constructLicenseInformation = (licenseType) => {
       break;
   }
   return `This project is licensed under the ${licenseDetails.name} license. 
-  [Click here] ("${licenseDetails.url}") to read about the details of this license.`;
+  [Click here]("${licenseDetails.url}") to read about the details of this license.`;
 }
 
 const createReadmeContent = (answers) => {
@@ -89,7 +89,7 @@ const createReadmeContent = (answers) => {
   ${testingInstructions}
   
   ## Questions
-  If you have any questions about the repo, open an issue or contact me directly at ${email}. You can find more of my work on [Github] (${githubLink}).`
+  If you have any questions about the repo, open an issue or contact me directly at ${email}. You can find more of my work on [Github](${githubLink}).`
 }
 
 module.exports = createReadmeContent;
