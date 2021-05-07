@@ -58,6 +58,6 @@ const init = async () => {
   ];
   const answers = await getProjectInformation(questions);
   const readmeContents = createReadmeContent(answers)
-  generateReadme(readmeContents)
+  generateReadme(readmeContents, answers.title)
 };
 init();

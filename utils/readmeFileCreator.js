@@ -8,8 +8,9 @@ const callback = (err) => {
   }
 }
 
-const generateReadme = (readmeContents) => {
-  fs.writeFile("README.md", readmeContents, callback)
+const generateReadme = (readmeContents, title) => {
+  const fileName = title.replace(/\s+/g, '-').toLowerCase()
+  fs.writeFile(`README-${fileName}.md`, readmeContents, callback)
 }
 
 module.exports = generateReadme;
