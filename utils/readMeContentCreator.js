@@ -50,7 +50,7 @@ const constructLicenseInformation = (licenseType) => {
       break;
   }
   return `This project is licensed under the ${licenseDetails.name} license. 
-  [Click here]("${licenseDetails.url}") to read about the details of this license.`;
+  [Click here](${licenseDetails.url}) to read about the details of this license.`;
 }
 
 const createReadmeContent = (answers) => {
@@ -66,8 +66,8 @@ const createReadmeContent = (answers) => {
   
   ## Table of Contents
   - [Description](#description)
-  - [Installation instructions](#installation-instructions)
-  - [Usage](#usage-information)
+  - [Installation](#installation)
+  - [Usage](#usage)
   - [License](#license)
   - [Contributing](#contributing)
   - [Tests](#tests)
