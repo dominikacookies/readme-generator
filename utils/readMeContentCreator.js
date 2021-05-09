@@ -35,15 +35,18 @@ const constructLicenseInformation = (licenseType) => {
       break;
     
     case "APACHE 2.0":
-      badge = `![image](https://www.apache.org/licenses/LICENSE-2.0)`
+      licenseDetails.name = "APACHE 2.0"
+      licenseDetails.url = `https://www.apache.org/licenses/LICENSE-2.0`
       break;
     
     case "GPL 3.0":
-      badge = `![image](https://www.gnu.org/licenses/gpl-3.0.en.html)`
+      licenseDetails.name = "GPL 3.0"
+      licenseDetails.url = `https://www.gnu.org/licenses/gpl-3.0.en.html`
       break;
   
     case "BSD 3":
-      badge = `![image](https://fossa.com/blog/open-source-software-licenses-101-bsd-3-clause-license/)`
+      licenseDetails.name = "BSD 3"
+      licenseDetails.url = `https://opensource.org/licenses/BSD-3-Clause`
       break;
   }
   return `This project is licensed under the ${licenseDetails.name} license. 
@@ -74,7 +77,9 @@ const createReadmeContent = (answers) => {
   ${description}
   
   ## Installation
+  \`\`\`
   ${installationInstructions}
+  \`\`\`
   
   ## Usage
   ${usageInformation}
