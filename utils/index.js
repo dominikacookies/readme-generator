@@ -21,7 +21,7 @@ const init = async () => {
     },
     {
       type: "input",
-      message: "Please provide usage installation instructions for your project.",
+      message: "Please provide installation instructions for your project.",
       name: "installationInstructions",
     },
     {

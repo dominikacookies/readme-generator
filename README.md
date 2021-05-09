@@ -15,6 +15,9 @@ The application has been designed to assist developers in creating new applicati
 - the application uses the switch statement to display the relevant copyright license badge and information
 - the README file is created with the project title in its name so that the user can create and store multiple READMEs without having to move them out of the app
 
+## Demo Video
+[Click here to view](.assets/../assets/demo-video.mov)
+
 ## Technologies Used
 - Javascript
 - jQuery
