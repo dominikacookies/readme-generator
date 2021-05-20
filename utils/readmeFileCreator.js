@@ -1,11 +1,8 @@
 const fs = require("fs")
 
 const callback = (err) => {
-  if (err) {
-    console.log(err)
-  } else {
-    console.log("Your new readme file has been created.")
-  }
+  const message = err ? err : "Your new readme file has been created."
+  console.log(message)
 }
 
 const generateReadme = (readmeContents, title) => {

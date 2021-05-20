@@ -1,9 +1,10 @@
 const getLicenseBadge = (licenseType) => {
   let badge = "";
-  if (licenseType === "None" ) {
-    return ""
-  }
+
   switch (licenseType) {
+    case "None":
+      break;
+
     case "MIT":
       badge = `![image](https://img.shields.io/apm/l/vim-mode)`
       break;
